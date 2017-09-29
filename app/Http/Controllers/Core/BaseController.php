@@ -21,6 +21,6 @@ class BaseController extends Controller
 	 //material
     public function getArticle($id) {
 		
-		echo 'Ответ - '.$id;
+		echo 'This id is => '.$id;
 	}
 }

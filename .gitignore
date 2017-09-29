@@ -1,0 +1,25 @@
+/vendor
+composer.lock
+.env
+.idea
+Будет удалено .env.example
+Будет удалено .gitattributes
+Будет удалено .gitignore
+Будет удалено .idea/
+Будет удалено access.log
+Будет удалено app/
+Будет удалено artisan
+Будет удалено bootstrap/
+Будет удалено composer.json
+Будет удалено config/
+Будет удалено database/
+Будет удалено error.log
+Будет удалено gulpfile.js
+Будет удалено package.json
+Будет удалено phpunit.xml
+Будет удалено public/
+Будет удалено readme.md
+Будет удалено resources/
+Будет удалено server.php
+Будет удалено storage/
+Будет удалено tests/

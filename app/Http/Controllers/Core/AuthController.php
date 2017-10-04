@@ -11,6 +11,7 @@ class AuthController extends Controller
 {
     public function login($name=null, $passw=null)
     {
-        return view('login');
+        //return view('login');
+        return view('login',['title' => 'Страница авторизации'])->render();
     }
 }

@@ -139,7 +139,7 @@
                               <a href="career.html">career</a>
                           </li>
                           <li>
-                              <a href="{{ route('posts') }}">Login</a>
+                              <a href="{{ route('auth') }}">Login</a>
                           </li>
                           <li>
                               <a href="registration.html">Registration</a>

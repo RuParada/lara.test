@@ -23,7 +23,7 @@
 
 @section('content')
 
-    <pre>{{ print_r(Session::all()) }}</pre>
+    <pre style="display: none">{{ print_r(Session::all()) }}</pre>
 
     <!--container start-->
     <div class="login-bg">
@@ -105,15 +105,6 @@
 
 
     <script src="js/wow.min.js"></script>
-    <script>
-        wow = new WOW(
-            {
-                boxClass:     'wow',      // default
-                animateClass: 'animated', // default
-                offset:       0          // default
-            }
-        )
-        wow.init();
-    </script>
+
 
 @endsection

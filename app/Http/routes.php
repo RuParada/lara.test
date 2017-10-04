@@ -161,3 +161,5 @@ Route::get('privacy',['uses' => 'Core\PageController@privacyShow', 'as' => 'priv
 
 
 Route::get('/post', ['as'=>'posts','uses'=>'Core\ArticleController@index']);
+
+Route::get('/auth', ['as'=>'auth','uses'=>'Core\AuthController@index']);

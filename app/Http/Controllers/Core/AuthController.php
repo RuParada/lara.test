@@ -9,9 +9,9 @@ use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
-    public function login($name=null, $passw=null)
+    public function mylogin($name=null, $passw=null)
     {
         //return view('login');
-        return view('login',['title' => 'Страница авторизации'])->render();
+        return view('mylogin',['title' => 'Моя страница авторизации'])->render();
     }
 }

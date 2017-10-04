@@ -162,8 +162,24 @@ Route::get('privacy',['uses' => 'Core\PageController@privacyShow', 'as' => 'priv
 
 Route::get('/post', ['as'=>'posts','uses'=>'Core\ArticleController@index']);
 
-Route::get('/auth', ['as'=>'auth','uses'=>'Core\AuthController@login']);
+Route::get('/myauth', ['as'=>'myauth','uses'=>'Core\AuthController@mylogin']);
 
-Route::auth();
 
-Route::get('/home', 'HomeController@index');
+
+Route::get('privacy',['middleware' => ['auth'],'uses' => 'Core\PageController@privacyShow', 'as' => 'privacy']);
+
+Route::group(['middleware' => ['web']], function () {
+    //routes here
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
+});
+
+/*
+
+Route::group(['prefix'=>'admin','middleware' => ['web','auth']], function () {
+    //routes here
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
+});
+*/
+

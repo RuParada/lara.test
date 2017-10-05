@@ -161,6 +161,7 @@ Route::get('privacy',['uses' => 'Core\PageController@privacyShow', 'as' => 'priv
 
 
 Route::get('/post', ['as'=>'posts','uses'=>'Core\ArticleController@index']);
+Route::get('/post/{id}', ['as'=>'post','uses'=>'Core\ArticleController@article']);
 
 Route::get('/myauth', ['as'=>'myauth','uses'=>'Core\AuthController@mylogin']);
 

@@ -23,10 +23,21 @@ class ArticleController extends Controller
 
         $count = DB::delete("DELETE FROM `articles` WHERE id = ?",[5]);
 
-
-        dump($arts);
         dump($count);
         dump($last_id);
-    
+    }
+
+    public function index(){
+
+        $arts = DB::select("SELECT * FROM `articles`");
+        return view('page',['title'=>'Статьи','articles'=>$arts]);
+ 
+    }
+
+    public function article($id){
+
+        $art = DB::select("SELECT * FROM `articles` WHERE id = :id",['id' => $id]);
+        //dump($art);
+        return view('article-content',['title'=>'Статья','article'=>$art]);
     }
 }

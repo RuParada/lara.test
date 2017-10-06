@@ -155,6 +155,7 @@ Route::get('/articles',['uses' => 'Core\BaseController@getArticles', 'as' => 'ar
 Route::get('/articles/{id}',['uses' => 'Core\BaseController@getArticle', 'as' => 'article']);
 Route::get('contacts',['uses' => 'Core\ContactController@index3', 'as' => 'contacts']);
 
+
 Route::match(['get', 'post'], '/contact/{name?}', ['uses'=>'Core\ContactController@show', 'as'=>'contact']);
 
 Route::get('privacy',['uses' => 'Core\PageController@privacyShow', 'as' => 'privacy']);

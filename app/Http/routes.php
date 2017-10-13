@@ -167,8 +167,8 @@ Route::get('/post/{id}', ['as'=>'post','uses'=>'Core\ArticleController@article']
 Route::get('/myauth', ['as'=>'myauth','uses'=>'Core\AuthController@mylogin']);
 
 
-
-Route::get('privacy',['middleware' => ['auth'],'uses' => 'Core\PageController@privacyShow', 'as' => 'privacy']);
+//Route::get('/home', 'HomeController@index')->name('admin');
+Route::get('admin',['middleware' => ['auth'],'uses' => 'Core\BaseController@index', 'as' => 'admin']);
 
 Route::group(['middleware' => ['web']], function () {
     //routes here
@@ -176,12 +176,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/home', 'HomeController@index');
 });
 
-/*
-
-Route::group(['prefix'=>'admin','middleware' => ['web','auth']], function () {
-    //routes here
-    Route::auth();
-    Route::get('/home', 'HomeController@index');
-});
-*/
-
+/*DB::listen(function($query) {
+    var_dump($query->sql, $query->bindings);
+});*/

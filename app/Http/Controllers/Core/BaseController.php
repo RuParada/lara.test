@@ -12,15 +12,17 @@ class BaseController extends Controller
     public function __construct() {
 		//$this->middleware('mymiddle');
 	}
-    
     //list materials
-    public function getArticles() {
-		
-	}
-	
+    public function getArticles() {}
 	 //material
-    public function getArticle($id) {
-		
-		echo 'This id is => '.$id;
-	}
+    public function getArticle($id) { echo 'This id is => '.$id; }
+
+    public function index() {
+    	if (view()->exists('page.admin')) {
+
+    		return view('page.admin')->withTitle('Admin');
+    		//return response()->view('page.admin',['title'=>'Admin']);
+
+    	}
+    }
 }

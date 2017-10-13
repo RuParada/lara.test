@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use App\User;
+use App\Country;
+use App\Article;
 
 class ArticleController extends Controller
 {
@@ -37,7 +40,16 @@ class ArticleController extends Controller
     public function article($id){
 
         $art = DB::select("SELECT * FROM `articles` WHERE id = :id",['id' => $id]);
-        //dump($art);
+
+        //$user = User::find(1);
+        //$country = Country::find(1);
+        //dump($user->articles);
+        /*foreach ($user->articles as $value) {
+            echo $value->title.'<br>';
+        }
+        */
+        $art2 = Article::find(1);
+        dump($art2->user->name); 
         return view('article-content',['title'=>'Статья','article'=>$art]);
     }
 }

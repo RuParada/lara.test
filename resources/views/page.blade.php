@@ -94,7 +94,7 @@
                 {{ $article->title }}
               </a>
             </h1>
-            <p>{!! $article->text !!}</p>
+            <p>{!! $article->desc !!}</p>
 
             <p><a class="btn btn-primary" href="{{ route('post',['id' => $article->id]) }}">Читать статью &raquo;</a></p>
           </div>

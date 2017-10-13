@@ -163,10 +163,10 @@
                               <a href="service.html">Service</a>
                           </li>
                           <li>
-                              <a href="terms.html">Terms & Condition</a>
+                              <a href="{{ route('privacy') }}">Privacy policy</a>
                           </li>
                           <li>
-                              <a href="{{ route('privacy') }}">Privacy policy</a>
+                              <a href="{{ route('admin') }}">Admin</a>
                           </li>
                       </ul>
                   </li>

@@ -12,7 +12,7 @@ class CreateCountrysTable extends Migration
      */
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
+        /*Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->integer('user_id')->unsigned()->default(1);
@@ -20,7 +20,7 @@ class CreateCountrysTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             
             $table->timestamps();
-        });
+        });*/
     }
 
     /**
@@ -30,6 +30,6 @@ class CreateCountrysTable extends Migration
      */
     public function down()
     {
-        Schema::drop('countries');
+        //Schema::drop('countries');
     }
 }

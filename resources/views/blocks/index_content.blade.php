@@ -1,3 +1,10 @@
+<!--
+    use App\Article;
+    return view('page')->with('header',$header);
+    $articles = Article::all();
+    $articles = Article::find($id);
+    $article = Article::select(['id','title','text'])->where('id',$id)->first();
+-->
 <div class="container">
 	<code>
 {--!! $script !!--}
